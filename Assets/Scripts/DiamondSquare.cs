@@ -14,9 +14,10 @@ public class DiamondSquare
     private readonly float _heightScale;
     private readonly float _roughness;
 
+    private readonly bool _obj;
     private readonly float[,] _heightmap;
 
-    public DiamondSquare(int size, float xScale, float yScale, float heightScale, float roughness)
+    public DiamondSquare(int size, float xScale, float yScale, float heightScale, float roughness, bool obj)
     {
         Trace.Assert(IsPowerOfTwo(size));
         _size = size;
@@ -24,8 +25,9 @@ public class DiamondSquare
         _yScale = yScale;
         _heightScale = heightScale;
         _roughness = roughness;
-
+        _obj = obj;
         _heightmap = new float[size, size];
+        GenerateHeightmap();
     }
 
     private bool IsPowerOfTwo(int x)
@@ -82,7 +84,7 @@ public class DiamondSquare
             tileSize /= 2;
         }
 
-        WriteToFile(Application.dataPath + "/Terrain.obj");
+        if(_obj) WriteToFile(Application.dataPath + "/Terrain.obj");
 
     }
 
@@ -273,6 +275,11 @@ public class DiamondSquare
                 writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "vt {0} {1}", u, v));
             }
         }
+    }
+
+    public float[,] GetHeightMap()
+    {
+        return _heightmap;
     }
 
 }
