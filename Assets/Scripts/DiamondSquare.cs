@@ -135,7 +135,6 @@ public class DiamondSquare
         _heightmap[y, x] = sum / count + NextGaussian() * scale;
     }
 
-
     private void SquareStep(int x, int y, int tileSize, float scale)
     {
         int half = tileSize / 2;
