@@ -48,6 +48,8 @@ public class Generator : EditorWindow
         {
             // Call the DiamondSquare class
             DiamondSquare diamondSquare = new DiamondSquare(size, _xScale, _yScale, _heightScale, _roughness, true);
+            diamondSquare.GenerateHeightmap(savePath);
+            Debug.Log($"Diamond Square OBJ exported to: {savePath}");
         }
         else
         {

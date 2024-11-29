@@ -27,7 +27,6 @@ public class DiamondSquare
         _roughness = roughness;
         _obj = obj;
         _heightmap = new float[size, size];
-        GenerateHeightmap();
     }
 
     private bool IsPowerOfTwo(int x)
@@ -35,7 +34,7 @@ public class DiamondSquare
         return (x != 0) && ((x & (x - 1)) == 0);
     }
 
-    public void GenerateHeightmap()
+    public void GenerateHeightmap(string outputPath = null)
     {
         InitialiseCorners();
         int tileSize = _size - 1;
@@ -84,8 +83,10 @@ public class DiamondSquare
             tileSize /= 2;
         }
 
-        if(_obj) WriteToFile(Application.dataPath + "/Terrain.obj");
-
+        if (_obj && !string.IsNullOrEmpty(outputPath))
+        {
+            WriteToFile(outputPath);
+        }
     }
 
     private void InitialiseCorners()
