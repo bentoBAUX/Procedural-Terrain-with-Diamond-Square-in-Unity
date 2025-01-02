@@ -10,6 +10,9 @@ To make the tool easier to use, I designed a custom Unity Editor Window. This al
 The tool is functional, but I don’t consider it asset-ready yet. One significant reason is the absence of a loading bar to provide user feedback during terrain generation. Additionally, I feel the UI could be improved to enhance usability. Future revisits would be necessary to refine this project, adding features and improvements to transform it into a polished and user-friendly asset.
 
 ## How does the algorithm work?
+
+![Diagram](https://github.com/bentoBAUX/Procedural-Terrain-with-Diamond-Square-in-Unity/blob/master/Assets/Images/Diamond_Square.png)
+
 On an abstract level, the Diamond-Square Algorithm works as follows:
 
 1. **Initialisation**: Begin with a square grid, assigning random values to the corner points.
@@ -18,6 +21,7 @@ On an abstract level, the Diamond-Square Algorithm works as follows:
 4. **Repeat**: Halve the step size and repeat until the grid is fully filled.
    
 This iterative process results in natural-looking terrain featuring both smooth and rugged details.
+
 
 ## Features
 - **Customisable Terrain**: Modify height, roughness, and resolution to your liking.
