@@ -3,7 +3,7 @@
 ![Image](https://github.com/bentoBAUX/Procedural-Terrain-with-Diamond-Square-in-Unity/blob/master/Assets/Images/Image.jpg)
 
 ## Overview
-In this project, I implemented the Diamond-Square Algorithm to generate procedural terrain in Unity. The algorithm is a fractal-based technique that creates realistic, randomised heightmaps, perfect for terrains in games and simulations.
+In this project, I implemented the Diamond-Square Algorithm to generate procedural terrains in Unity. The algorithm is a fractal-based technique that creates realistic, randomised heightmaps, perfect for terrains in games and simulations.
 
 To make the tool easier to use, I designed a custom Unity Editor Window. This allows users to configure and generate terrain directly within the editor, removing the need for manual scripting and making the workflow more intuitive.
 
