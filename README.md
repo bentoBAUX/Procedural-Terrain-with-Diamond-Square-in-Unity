@@ -59,5 +59,5 @@ To use this project, follow these steps:
 This workflow basically imports a new asset into your project each time you generate a terrain. While functional, this isn't optimal. Future updates to this project will focus on enhancing the editor's usability for a more streamlined experience.
 
 ## Licence
-This project is licensed under the MIT Licence. See the LICENSE file for details.
+This project is licensed under the MIT Licence. See the [LICENSE](https://github.com/bentoBAUX/Procedural-Terrain-with-Diamond-Square-in-Unity/blob/master/LICENSE) file for details.
 
