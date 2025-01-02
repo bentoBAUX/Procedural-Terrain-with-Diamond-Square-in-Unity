@@ -37,9 +37,10 @@ public class Generator : EditorWindow
     private void GenerateAndExport()
     {
         int size = (int)(Math.Pow(2, _resolution) + 1);
-        if (size < 2 || (size - 1 & (size - 2)) != 0)
+
+        if (size < 3)
         {
-            Debug.LogError("Size must be 2^n + 1 (e.g., 129, 257, etc.)");
+            Debug.LogError("Grid size must be at least 3 (2^n + 1 for n >= 1).");
             return;
         }
 
@@ -56,4 +57,5 @@ public class Generator : EditorWindow
             Debug.LogWarning("Export cancelled.");
         }
     }
+
 }
